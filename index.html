@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consumindo API</title>
+    </head>
+    <body>
+        
+        <h1>Consumindo API no Front-End</h1>
+        <p>Aperte f12 para ir para o console</p>
+        <ul id="main"></div>
+
+        <script>
+
+            async function getContent(){
+                try{
+                    const response = await fetch('http://localhost:4567/');
+                    const data = await response.json();
+                    const main = window.document.querySelector("#main");
+                    console.log(data, typeof data);
+                    showData(data, main);
+                }catch (error){
+                    console.log(error);
+                }
+            }      
+            
+            getContent();
+
+
+            function showData(users, element){  
+                let output = '';
+                for (let user of users){
+                    output += `<li>${user.name}</li>`;
+                }
+                element.innerHTML = output;
+            }
+
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "consuming-api",
+  "version": "1.0.0",
+  "description": "Criar uma api \r - [] Iniciar o projeto `npm init -y`\r - [] Instalar dependências `npm i express nodemon cors axios` \r - [] Criar uma roata para acessar a API\r - [] Servir a API \r - [] Habilitar o CORS \r - [] Habilitar o nodemon para reiniciar o server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
